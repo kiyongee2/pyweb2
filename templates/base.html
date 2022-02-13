@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi~ pyweb</title>
+    <link rel="stylesheet" href="{% static 'board/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'board/css/style.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+<!-- 기본 템플릿 안에 삽입될 내용 start -->
+{% block content %}
+    <!--내용-->
+{% endblock %}
+{% include 'footer.html' %}
+<!-- 기본 템플릿 안에 삽입될 내용 end -->
+<script src="{% static 'board/js/jquery-3.6.0.js' %}"></script>
+<script src="{% static 'board/js/bootstrap.js' %}"></script>
+{% block script %}
+   <!--자바스트립트(제이쿼리) 소스 -->
+{% endblock %}
+</body>
+</html>

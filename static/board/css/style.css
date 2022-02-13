@@ -1,0 +1,15 @@
+/* 본문 스타일 */
+body{padding-top: 55px;}
+section{height:700px;}
+#main img{border-radius: 5px;}
+
+/* footer 스타일 */
+footer .list-inline li{display:inline-block; margin:10px;}
+footer address{margin-left:10px; color:#ccc;}
+footer address p{line-height:0.7rem; font-size:0.9rem}
+
+/* comment 스타일 */
+.comment{
+  border-top:1px dotted #ccc;
+  font-size: 0.8rem;
+}

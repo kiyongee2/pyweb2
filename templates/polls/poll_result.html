@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-3">
+    <section>
+        <h4 class="border-bottom py-2">투표 결과</h4>
+        <div class="card my-3">
+            <h5 style="margin:20px 100px 10px;">{{ question.question_text }}</h5>
+            <ul style="width:500px; margin:0 100px; padding:0 10px;">
+                {% for choice in question.choice_set.all %}
+                <li style="margin:20px;">
+                    {{ choice.choice_text }} -- {{ choice.votes }}votes
+                </li>
+                {% endfor %}
+            </ul>
+            <div style="padding-left:100px;">
+                <a href="{% url 'poll:index' %}"
+                   class="btn btn-secondary my-4">설문목록 가기</a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
